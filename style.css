@@ -160,3 +160,31 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+/* === WhatsApp-Stil Box für Kanäle === */
+.kanalbox {
+  border: 2px solid #25D366;
+  background-color: #eafff3;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.kanalbox:hover {
+  transform: scale(1.02);
+  background-color: #d8ffe9;
+}
+
+.kanalbox a {
+  color: #075e54;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+.kanalbox::before {
+  content: "💬 ";
+  font-size: 1.2rem;
+}
