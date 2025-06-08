@@ -1,16 +1,37 @@
-/* Reset + Grundstil */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
+/* Navbar */
 .navbar {
-  background: #333;
-  color: white;
-  padding: 0.5em 1em;
-  position: relative;
+  background: #fff;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
 }
 
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.site-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #d30000; /* Feuerwehrrot */
+}
+
+/* Menü rechts */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -24,23 +45,25 @@ body {
 }
 
 .nav-menu a {
-  color: white;
+  color: #333;
   text-decoration: none;
   padding: 0.5em;
   display: block;
+  white-space: nowrap;
 }
 
-/* Dropdown Menü */
+/* Dropdown */
 .dropdown-menu {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background: #444;
+  background: #f5f5f5;
   list-style: none;
   margin: 0;
   padding: 0;
-  min-width: 150px;
+  min-width: 160px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-menu li a {
@@ -51,14 +74,14 @@ body {
   display: block;
 }
 
-/* Burger-Icon */
+/* Burger */
 .burger {
   display: none;
   font-size: 2em;
   cursor: pointer;
 }
 
-/* Responsive Menü */
+/* Responsive */
 @media (max-width: 768px) {
   .burger {
     display: block;
@@ -67,12 +90,9 @@ body {
   .nav-menu {
     display: none;
     flex-direction: column;
-    gap: 0;
-    background: #333;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    background: #fff;
     width: 100%;
+    margin-top: 1em;
   }
 
   .nav-menu.show {
@@ -81,15 +101,35 @@ body {
 
   .dropdown-menu {
     position: static;
+    box-shadow: none;
+    background: #eee;
   }
 
   .dropdown .dropdown-menu {
     display: none;
     flex-direction: column;
-    background: #555;
   }
 
   .dropdown.open .dropdown-menu {
     display: flex;
   }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2em 1em;
+  background: #f2f2f2;
+  color: #333;
+  font-size: 0.9em;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: #d30000;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
