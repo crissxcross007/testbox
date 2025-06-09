@@ -202,3 +202,23 @@ footer a:hover {
   content: "💬 ";
   font-size: 1.2rem;
 }
+/* === FAQ Seite  === */
+details {
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5em;
+  background: #f9f9f9; /* optional: Grundhintergrund */
+}
+
+details[open] {
+  background: #f0f0f0; /* Heller Hintergrund bei geöffneter Antwort */
+}
+
+details p {
+  margin: 0.5em 0 0;
+  padding: 0.5em;
+  background: #f7f7f7; /* leichtes Grau für Textbereich */
+  border-radius: 4px;
+}
+
